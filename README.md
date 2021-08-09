@@ -1,4 +1,4 @@
-Custom Stepper component based on @material-ui/core Stepper component.
+### Custom Stepper component based on @material-ui/core Stepper component.
 
-yarn start - starts up storybook dev server
-yarn build - builds up project
+1. yarn start - starts up storybook dev server
+2. yarn build - builds up project
