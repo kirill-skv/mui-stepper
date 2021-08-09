@@ -2,7 +2,7 @@
   "name": "joovence-stepper",
   "license": "MIT",
   "main": "lib/src/index.js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": false,
   "directories": {
     "lib": "lib"
@@ -106,5 +106,6 @@
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ]
-  }
+  },
+  "keywords": ["react", "material-ui"]
 }
