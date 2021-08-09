@@ -6,7 +6,7 @@ import { addDecorator, addParameters, configure } from "@storybook/react";
 const basicTheme = create({
   base: 'light',
   brandTitle: 'joovence-mui',
-  brandUrl: 'todo',
+  brandUrl: 'https://github.com/kirill-skv/mui-stepper.git',
   brandImage: null
 });
 

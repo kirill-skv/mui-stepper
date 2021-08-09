@@ -12,7 +12,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "todo"
+    "url": "https://github.com/kirill-skv/mui-stepper.git"
   },
   "peerDependencies": {
     "@material-ui/core": "^4.12.3",
