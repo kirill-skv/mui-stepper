@@ -1,8 +1,8 @@
 import React from 'react';
-import { customStyles } from './styles';
+import { useCustomStyles } from './styles';
 
-export function CustomStepConnector(): JSX.Element {
-  const cls = customStyles();
+export const CustomStepConnector: React.FC = () => {
+  const cls = useCustomStyles();
 
   return <div className={cls.connector} />;
-}
+};

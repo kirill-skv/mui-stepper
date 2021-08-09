@@ -2,7 +2,7 @@
   "name": "joovence-stepper",
   "license": "MIT",
   "main": "lib/src/index.js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": false,
   "directories": {
     "lib": "lib"
@@ -37,7 +37,6 @@
     "@typescript-eslint/parser": "^4.29.0",
     "babel-eslint": "^10.1.0",
     "babel-plugin-import": "^1.13.3",
-    "copyfiles": "^2.4.1",
     "eslint": "^7.19.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^7.2.0",
@@ -62,8 +61,6 @@
     "clean": "rm -rf ./lib",
     "prebuild": "yarn clean",
     "build": "tsc --build \"./tsconfig.build.json\"",
-    "copy-files": "copyfiles -u 1 src/components/Styles/customStyles.css lib/",
-    "postbuild": "yarn run copy-files",
     "eject": "react-scripts eject",
     "prepare": "husky install",
     "lint": "npx eslint '**/*.{js,jsx,ts,tsx}'",

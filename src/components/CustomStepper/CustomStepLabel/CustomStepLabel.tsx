@@ -1,22 +1,22 @@
 import React from 'react';
 import cn from 'classnames';
 
-import { customStyles } from './styles';
+import { useCustomStyles } from './styles';
 
-interface PropsI {
+export interface CustomStepLabelProps {
   label: string;
   index: number;
   activeStep: number;
   withoutStepNumber: boolean;
 }
 
-export function CustomStepLabel({
+export const CustomStepLabel: React.FC<CustomStepLabelProps> = ({
   label,
   activeStep,
   index,
   withoutStepNumber
-}: PropsI): JSX.Element {
-  const cls = customStyles();
+}) => {
+  const cls = useCustomStyles();
   return (
     <div
       className={cn(cls.wrapper, {
@@ -29,4 +29,4 @@ export function CustomStepLabel({
       <p className={cls.label}>{label}</p>
     </div>
   );
-}
+};

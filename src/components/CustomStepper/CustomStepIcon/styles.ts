@@ -1,27 +1,22 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export const customStyles = makeStyles((theme) => {
-  const point = {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-
-    width: '16px',
-    height: '16px',
-
-    borderRadius: '50%',
-    transition: theme.transitions.create(['background-color', 'transform'], {
-      duration: theme.transitions.duration.standard,
-      easing: 'ease-in-out'
-    })
-  };
-
+export const useCustomStyles = makeStyles((theme) => {
   return {
-    mainPoint: {
-      ...point
+    point: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+
+      width: '16px',
+      height: '16px',
+
+      borderRadius: '50%',
+      transition: theme.transitions.create(['background-color', 'transform'], {
+        duration: theme.transitions.duration.standard,
+        easing: 'ease-in-out'
+      })
     },
     smallPoint: {
-      ...point,
       width: '2px',
       height: '2px',
 
@@ -29,7 +24,6 @@ export const customStyles = makeStyles((theme) => {
       transform: 'scale(3)'
     },
     bigPoint: {
-      ...point,
       transform: 'scale(1.25)'
     },
     completed: {

@@ -2,25 +2,25 @@ import React from 'react';
 import { StepIconProps } from '@material-ui/core';
 import cn from 'classnames';
 
-import { customStyles } from './styles';
+import { useCustomStyles } from './styles';
 
-export function CustomStepIcon({
+export const CustomStepIcon: React.FC<StepIconProps> = ({
   completed,
   active
-}: StepIconProps): JSX.Element {
-  const cls = customStyles();
+}) => {
+  const cls = useCustomStyles();
 
   if (completed) {
     return (
-      <div className={cn(cls.completed, cls.bigPoint)}>
-        <div className={cls.smallPoint} />
+      <div className={cn(cls.point, cls.completed, cls.bigPoint)}>
+        <div className={cn(cls.point, cls.smallPoint)} />
       </div>
     );
   }
 
-  if (active) {
-    return <div className={cn(cls.active, cls.mainPoint)} />;
-  }
-
-  return <div className={cn(cls.next, cls.mainPoint)} />;
-}
+  return (
+    <div
+      className={cn({ [cls.active]: active, [cls.next]: !active }, cls.point)}
+    />
+  );
+};

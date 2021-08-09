@@ -6,12 +6,13 @@ import {
   StepLabel
 } from '@material-ui/core';
 
-import { Styles } from '../Styles/Styles';
 import { Theme } from '../Theme/Theme';
 
 import { CustomStepIcon } from './CustomStepIcon/CustomStepIcon';
 import { CustomStepConnector } from './CustomStepConnector/CustomStepConnector';
 import { CustomStepLabel } from './CustomStepLabel/CustomStepLabel';
+
+import { useCustomStyles } from './styles';
 
 export interface StepperProps extends Omit<InitialStepperProps, 'children'> {
   steps: string[];
@@ -20,40 +21,47 @@ export interface StepperProps extends Omit<InitialStepperProps, 'children'> {
   childAfterLastStep?: React.ReactNode;
 }
 
-export function CustomStepper({
+export const CustomStepper: React.FC<StepperProps> = ({
   steps,
   activeStep,
   withoutStepNumber,
   childAfterLastStep,
   ...props
-}: StepperProps): JSX.Element {
+}) => {
+  const cls = useCustomStyles();
+
   return (
-    <Styles>
-      <Theme>
-        <Stepper
-          activeStep={activeStep}
-          connector={<CustomStepConnector />}
-          alternativeLabel
-          {...props}
-        >
-          {steps.map((label, index) => (
-            <Step key={label}>
-              <StepLabel StepIconComponent={CustomStepIcon}>
-                <CustomStepLabel
-                  label={label}
-                  index={index}
-                  activeStep={activeStep}
-                  withoutStepNumber={!!withoutStepNumber}
-                />
-              </StepLabel>
-            </Step>
-          ))}
-          {childAfterLastStep && <Step>{childAfterLastStep}</Step>}
-        </Stepper>
-      </Theme>
-    </Styles>
+    <Theme>
+      <Stepper
+        activeStep={activeStep}
+        connector={<CustomStepConnector />}
+        alternativeLabel
+        {...props}
+      >
+        {steps.map((label, index) => (
+          <Step key={label}>
+            <StepLabel
+              StepIconComponent={CustomStepIcon}
+              classes={{
+                iconContainer: cls.iconContainer,
+                root: cls.root,
+                label: cls.label
+              }}
+            >
+              <CustomStepLabel
+                label={label}
+                index={index}
+                activeStep={activeStep}
+                withoutStepNumber={!!withoutStepNumber}
+              />
+            </StepLabel>
+          </Step>
+        ))}
+        {childAfterLastStep && <Step>{childAfterLastStep}</Step>}
+      </Stepper>
+    </Theme>
   );
-}
+};
 
 CustomStepper.defaultProps = {
   withoutStepNumber: false,

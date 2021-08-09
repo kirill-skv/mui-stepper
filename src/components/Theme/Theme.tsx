@@ -3,10 +3,10 @@ import { ThemeProvider } from '@material-ui/core';
 
 import { theme } from './customTheme';
 
-interface PropsI {
+export interface ThemeProps {
   children: React.ReactNode;
 }
 
-export function Theme({ children }: PropsI): JSX.Element {
+export const Theme: React.FC<ThemeProps> = ({ children }) => {
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
-}
+};

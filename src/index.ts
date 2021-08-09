@@ -1,5 +1,8 @@
-import { CustomStepper } from './components/CustomStepper/CustomStepper';
+import {
+  CustomStepper,
+  StepperProps
+} from './components/CustomStepper/CustomStepper';
 
 export default CustomStepper;
 
-export { CustomStepper };
+export { CustomStepper, StepperProps };

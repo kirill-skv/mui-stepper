@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 
-export const customStyles = makeStyles((theme) => ({
+export const useCustomStyles = makeStyles((theme) => ({
   wrapper: {
     textAlign: 'left',
     transition: theme.transitions.create(['color'], {
