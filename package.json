@@ -2,7 +2,7 @@
   "name": "joovence-stepper",
   "license": "MIT",
   "main": "lib/src/index.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "directories": {
     "lib": "lib"
@@ -14,9 +14,11 @@
     "type": "git",
     "url": "https://github.com/kirill-skv/mui-stepper.git"
   },
-  "peerDependencies": {
+  "dependencies": {
     "@material-ui/core": "^4.12.3",
-    "classnames": "^2.3.1",
+    "classnames": "^2.3.1"
+  },
+  "peerDependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -52,8 +54,6 @@
     "react-scripts": "4.0.3",
     "storybook-readme": "^5.0.9",
     "typescript": "^4.1.2",
-    "@material-ui/core": "^4.12.3",
-    "classnames": "^2.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
