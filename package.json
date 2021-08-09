@@ -2,7 +2,7 @@
   "name": "joovence-stepper",
   "license": "MIT",
   "main": "lib/src/index.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": false,
   "directories": {
     "lib": "lib"
