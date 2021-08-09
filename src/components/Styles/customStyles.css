@@ -1,0 +1,14 @@
+.MuiStepLabel-iconContainer {
+  min-height: 20px;
+  min-width: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.MuiStepLabel-root {
+  align-items: flex-start;
+}
+
+.MuiStepLabel-label.MuiStepLabel-alternativeLabel {
+  margin-top: 8px;
+}
